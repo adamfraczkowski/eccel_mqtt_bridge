@@ -18,6 +18,6 @@
       "watchdog": "^0.8.17"
     },
     "bin": {
-      "mqtt_bridge": "./app.mjs"
+      "eccel_mqtt_bridge": "./app.mjs"
     }
   }
