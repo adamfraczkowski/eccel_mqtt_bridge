@@ -1,6 +1,6 @@
 {
     "name": "@adamfraczkowski/eccel_mqtt_bridge",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "MQTT bridge interface for NFC reader ECCEL",
     "main": "./app.mjs",
     "scripts": {
