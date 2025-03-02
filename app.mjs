@@ -2,6 +2,8 @@
 
 
 import mqtt from "mqtt";
+import { SerialPort } from 'serialport'
+import NFCDriver from "./nfcDriver.mjs";
 
 var mqttClient = undefined;
 var serialHandler = undefined;
@@ -34,7 +36,7 @@ nfcHandler.inputStream.on("data",data=>{
     });
 });
 
-nfcDriver.nfcDataPolling.on("data",(tag)=>{
+nfcHandler.nfcDataPolling.on("data",(tag)=>{
     var tagData = tag;
     tagData["timestamp"] = Math.floor(new Date().getTime() / 1000);
     mqttClient.publish(MQTT_OUTPUT_TOPIC,JSON.stringify(tagData));
